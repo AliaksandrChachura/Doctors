@@ -13,7 +13,7 @@ class App extends Component {
     worklog: []
   };
 
-  
+  // const [doctors, setDoctors] = useState([]);
   
   promiseHandler() {
     // const [doctors, setDoctors] = useState([]);
@@ -24,19 +24,20 @@ class App extends Component {
       return result;
      })
      .then( data => {
-        this.state.employees = data;
-       console.log(data)
+      const transformedDoctors = data.map(doctorData => {
+        return {
+          id: doctorData.id
+        };
+      })
+      setDoctors(transformedDoctors)
      });
   }
 
-  
+  promiseHandler()
       
   render() {
     
     const { loading } = this.state;
-
-    // this.state.employees = this.promiseHandler()
-    console.log(this.state.employees)
 
     if (loading) {
       return "Loading...";
