@@ -1,0 +1,26 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-list-item {
+  width: 200px;
+  height: 100px;
+  border: 1px solid;
+  margin: 10px;
+}
